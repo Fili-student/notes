@@ -1,0 +1,28 @@
+section{
+    display: flex;
+    height: 90vh;
+    border: solid black 1px;
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.first{
+    border: green 1px solid;
+    width: 300px;
+    height: 300px;
+    left: 250px;
+    top:70px;
+    position: relative;
+    background-color: white;
+}
+
+h2{
+    color: green;
+    font-size: 80px;
+    font-family: monospace;
+    position: relative;
+    left: 200px;
+    background-color: rgba(240, 248, 255, 0.508);
+}
