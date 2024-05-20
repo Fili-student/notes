@@ -8,24 +8,25 @@ section{
     
 }
 
-.first{
+.second{
     /* border: rgb(119, 0, 128) 1px solid; */
-    width: 490px;
-    height: 400px;
-    left: 350px;
+    width: 590px;
+    height: 600px;
+    left: 950px;
     top:70px;
     position: relative;
     background-color: white;
-    background-image: url(https://images.pexels.com/photos/4672553/pexels-photo-4672553.jpeg?auto=compress&cs=tinysrgb&w=600);
-    background-position: center;
-    /* filter: blur(0.4px); */
-    /* filter: brightness(100%); */
+    background-image: url(https://images.pexels.com/photos/20004051/pexels-photo-20004051/free-photo-of-a-person-holding-flowers.jpeg?auto=compress&cs=tinysrgb&w=600);
+    /* background-position: 80px 0px; */
+    /* filter: blur(0.4px);
+    filter: brightness(80%); */
     display: flex;
     justify-content: center;
     input{
         width: 300px;
         height: 35px;
-        margin-top:20px;
+        margin-left: 40px;
+        margin-top:20px ;
         font-size: 30px;
         color:white;
         background-color:rgb(249, 246, 237);
@@ -37,21 +38,27 @@ section{
     }
   
 }
-.first:hover{
+.second:hover{
     transition: all 1s ease;
-    width: 470px;
-    height: 380px;
+    width: 570px;
+    height: 580px;
 }
 
-.title-of-first{
-    /* color: rgb(39, 74, 181); */
-    color: rgb(231, 150, 1);
+.title-of-second{
+    /* color: rgb(5, 60, 26); */
+    color: rgb(142, 2, 2);
     font-size: 80px;
     font-family:'Oi', display; 
     position: relative;
-    left: 230px;
+    left: 800px;
     /* background-color:rgb(249, 246, 237); */
     border-radius: 10px;
     width: fit-content;
-    /* border: solid black 1px; */
 }
+
+/* input{
+    width: 300px;
+    height: 20px;
+display:flex;
+justify-self:flex-end;
+} */
