@@ -4,7 +4,7 @@ function Header(){
         <header>
             <h1>Notes</h1>
         <nav>
-            <ul>
+            <ul className='headli'>
             <li>Home</li>
             <li>Search</li>
             <li>Ideas</li>

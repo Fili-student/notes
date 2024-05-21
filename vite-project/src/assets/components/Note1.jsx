@@ -1,58 +1,67 @@
-import './note1.css'
-import React, {useState} from 'react';
-function Note1(){
+import React, { useState } from 'react';
+import './note1.css';
 
-    const [tasks, setTasks] = useState([]);
-    const [newTask,setNewTask] = useState("");
+function Note1() {
+  const [inputValue, setInputValue] = useState('');
+  const [notes, setNotes] = useState([]);
 
-    function handleInputChange(event){
-        setNewTask(event.target.value);
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const handleAddNote = () => {
+    if (inputValue.trim() !== '') {
+      setNotes([...notes, inputValue]);
+      setInputValue('');
     }
+  };
 
-  function addTask(){
- }
- function deleteTask(index){
- }
-  function moveTaskUp(){
- }
-  function moveTaskDown(){
- }
+  const handleDeleteNote = (index) => {
+    const newNotes = notes.filter((_, noteIndex) => noteIndex !== index);
+    setNotes(newNotes);
+  };
 
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      handleAddNote();
+    }
+  };
 
+  return (
+    <section>
+      <div className="first">
+        <main>
+        <input
+          placeholder="schreibe hier"
+          type="text"
+          value={inputValue}
+          onChange={handleInputChange}
+          onKeyPress={handleKeyPress}
+        />
+          <button className='add-button' onClick={handleAddNote}>
+          Add
+        </button>
 
-
-  return(
-        <section>
-            <div className="first">
-                <input   placeholder="Deine Notiz!" type="text" value={newTask} onChange={handleInputChange}/>
+        <article>
                 <ul>
-                    {tasks.map((task,index)=>
-                    <li key={index}>
-                        <span className='text'>{task}</span>
-                    </li>
-                    )}
+                {notes.map((note, index) => (
+            <li id='li1' key={index} onClick={() => handleDeleteNote(index)}>
+              {note}
+            </li>
+          ))}
+
                 </ul>
-                <button className='add-button' onClick={addTask} >
-                    Add
-                </button>
-            </div>
-            <h2 className="title-of-first">Sport</h2>
-        </section>
-    );
+                </article>
+                </main>
+      </div>
+      <h2 className="title-of-first">Sport</h2>
+    </section>
+  );
 }
-export default Note1
+
+export default Note1;
 
 
-// import './note1.css'
-// function Note1(){
-//   return(
-//         <section>
-//             <div className="first">
-//                 <input type="text" />
-//                 <ul></ul>
-//             </div>
-//             <h2 className="title-of-first">Sport</h2>
-//         </section>
-//     );
-// }
-// export default Note1
+
+
+

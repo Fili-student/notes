@@ -5,11 +5,12 @@ section{
     display:  flex;
     flex-direction: column;
     justify-content: center;
-    
+    /* margin-left: 30px; */
+
 }
 
 .first{
-    /* border: rgb(119, 0, 128) 1px solid; */
+    
     width: 490px;
     height: 400px;
     left: 350px;
@@ -22,6 +23,9 @@ section{
     /* filter: brightness(100%); */
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    overflow:scroll;
+
     input{
         width: 300px;
         height: 35px;
@@ -29,13 +33,21 @@ section{
         font-size: 30px;
         color:white;
         background-color:rgb(249, 246, 237);
+        border-radius: 10px;
 
     }
     input:focus{
         background-color:rgba(249, 246, 237, 0.413);
-
+        }
+    input::placeholder{
+        color: transparent;
     }
-  
+    input:focus::placeholder{
+        color:rgb(150, 96, 2);
+    }
+
+
+
 }
 .first:hover{
     transition: all 1s ease;
@@ -45,13 +57,58 @@ section{
 
 .title-of-first{
     /* color: rgb(39, 74, 181); */
-    color: rgb(231, 150, 1);
+    color: #e79601;
     font-size: 80px;
-    font-family:'Oi', display; 
+    font-family:'Oi', display;
     position: relative;
     left: 230px;
     /* background-color:rgb(249, 246, 237); */
     border-radius: 10px;
     width: fit-content;
     /* border: solid black 1px; */
+}
+
+.add-button{
+    margin-top: 20px;
+    height: 35px;
+    width: 60px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(249, 246, 237);
+    color: rgb(231, 150, 1);
+    font-weight: bold;
+    font-size: larger;
+}
+
+
+ul{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    /* background-color: rgba(255, 255, 255, 0.247); */
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+
+article{
+    max-height: 190px;
+    overflow: scroll;
+    border: none;
+    scrollbar-color: #e79601 #e79601;
+    
+}
+/* #e06d0f */
+
+main{
+    display: flex;flex-direction: column;
+    margin-left: 30px;
+    margin-bottom: 100px;
+    
+}
+
+#li1{
+    color: white;
+    border-bottom: #e79601 solid 1px;
+    font-size: 35px;
 }
